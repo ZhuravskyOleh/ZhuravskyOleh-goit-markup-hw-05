@@ -29,7 +29,9 @@
         >
         <nav class="header-nav">
           <ul class="nav-list list">
-            <li class="nav-item"><a href="#" class="nav-link current">Студія</a></li>
+            <li class="nav-item">
+              <a href="#" class="nav-link current">Студія</a>
+            </li>
             <li class="nav-item">
               <a href="./Portpholios.html" class="nav-link">Портфоліо</a>
             </li>
@@ -61,7 +63,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="btn">Замовити послугу</button>
+          <button type="button" class="btn" data-modal-open>Замовити послугу</button>
         </div>
       </section>
 
@@ -126,28 +128,37 @@
           <h2 class="we-do-title">Чим ми займаємося</h2>
           <ul class="we-do-list list">
             <li class="we-do-item">
-              <img
-                class="we-do-img"
-                src="./image/img1.jpg"
-                alt="Людина друкує на клавіатурі"
-                width="370"
-              />
+              <div class="we-do-overlay">
+                <img
+                  class="we-do-img"
+                  src="./image/img1.jpg"
+                  alt="Людина друкує на клавіатурі"
+                  width="370"
+                />
+                <p class="we-do-text">Десктопні додатки</p>
+              </div>
             </li>
             <li class="we-do-item">
-              <img
-                class="we-do-img"
-                src="./image/img2.jpg"
-                alt="Людина дивиться у телефон"
-                width="370"
-              />
+              <div class="we-do-overlay">
+                <img
+                  class="we-do-img"
+                  src="./image/img2.jpg"
+                  alt="Людина друкує на клавіатурі"
+                  width="370"
+                />
+                <p class="we-do-text">Мобільні додатки</p>
+              </div>
             </li>
             <li class="we-do-item">
-              <img
-                class="we-do-img"
-                src="./image/img3.jpg"
-                alt="Дюдина дивиться на діаграмму"
-                width="370"
-              />
+              <div class="we-do-overlay">
+                <img
+                  class="we-do-img"
+                  src="./image/img3.jpg"
+                  alt="Людина друкує на клавіатурі"
+                  width="370"
+                />
+                <p class="we-do-text">Дизайнерські рішення</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -190,7 +201,7 @@
                 </li>
                 <li class="social-item">
                   <a href="#" class="social-link">
-                    <svg width="20" height="20" class="social-icon"> 
+                    <svg width="20" height="20" class="social-icon">
                       <use href="./image/icon.svg#icon-linkedin"></use>
                     </svg>
                   </a>
@@ -230,7 +241,7 @@
                 </li>
                 <li class="social-item">
                   <a href="#" class="social-link">
-                    <svg width="20" height="20" class="social-icon"> 
+                    <svg width="20" height="20" class="social-icon">
                       <use href="./image/icon.svg#icon-linkedin"></use>
                     </svg>
                   </a>
@@ -270,7 +281,7 @@
                 </li>
                 <li class="social-item">
                   <a href="#" class="social-link">
-                    <svg width="20" height="20" class="social-icon"> 
+                    <svg width="20" height="20" class="social-icon">
                       <use href="./image/icon.svg#icon-linkedin"></use>
                     </svg>
                   </a>
@@ -310,7 +321,7 @@
                 </li>
                 <li class="social-item">
                   <a href="#" class="social-link">
-                    <svg width="20" height="20" class="social-icon"> 
+                    <svg width="20" height="20" class="social-icon">
                       <use href="./image/icon.svg#icon-linkedin"></use>
                     </svg>
                   </a>
@@ -404,37 +415,63 @@
         <div class="footer-social">
           <p class="footer-social-title">приєднуйтесь</p>
           <ul class="social-list list">
-                <li class="social-item">
-                  <a href="#" class="social-link footer-icon">
-                    <svg width="20" height="20" class="social-icon">
-                      <use href="./image/icon.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-item">
-                  <a href="#" class="social-link footer-icon">
-                    <svg width="20" height="20" class="social-icon">
-                      <use href="./image/icon.svg#icon-twitter"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-item">
-                  <a href="#" class="social-link footer-icon">
-                    <svg width="20" height="20" class="social-icon">
-                      <use href="./image/icon.svg#icon-facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="social-item">
-                  <a href="#" class="social-link footer-icon">
-                    <svg width="20" height="20" class="social-icon"> 
-                      <use href="./image/icon.svg#icon-linkedin"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
+            <li class="social-item">
+              <a href="#" class="social-link footer-icon">
+                <svg width="20" height="20" class="social-icon">
+                  <use href="./image/icon.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="#" class="social-link footer-icon">
+                <svg width="20" height="20" class="social-icon">
+                  <use href="./image/icon.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="#" class="social-link footer-icon">
+                <svg width="20" height="20" class="social-icon">
+                  <use href="./image/icon.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a href="#" class="social-link footer-icon">
+                <svg width="20" height="20" class="social-icon">
+                  <use href="./image/icon.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
+    <!-- modal -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-btn" data-modal-close>
+          <svg width="11" height="11">
+            <use href="./image/icon.svg#icon-Close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script>
+      (() => {
+        const refs = {
+          openModalBtn: document.querySelector("[data-modal-open]"),
+          closeModalBtn: document.querySelector("[data-modal-close]"),
+          modal: document.querySelector("[data-modal]"),
+        };
+
+        refs.openModalBtn.addEventListener("click", toggleModal);
+        refs.closeModalBtn.addEventListener("click", toggleModal);
+
+        function toggleModal() {
+          refs.modal.classList.toggle("is-hidden");
+        }
+      })();
+    </script>
   </body>
 </html>
