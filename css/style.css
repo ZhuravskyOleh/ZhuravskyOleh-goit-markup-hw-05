@@ -139,7 +139,7 @@ h1,h2,h3,h4,h5,h6,p {
 
 .mail-link {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     font-weight: 500;
     color: var(--main-text-color);
     text-decoration: none;
@@ -153,7 +153,7 @@ h1,h2,h3,h4,h5,h6,p {
 
 .phone-link {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     font-weight: 500;
     color: var(--main-text-color);
     text-decoration: none;
@@ -205,9 +205,11 @@ h1,h2,h3,h4,h5,h6,p {
     border-radius: 4px;
     border: none;
     cursor: pointer;
+    transition: background-color var(--transition-time) var(--transition-cubic) ;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
     background-color: var(--btn-hover-color);
 }
 
@@ -398,11 +400,7 @@ h1,h2,h3,h4,h5,h6,p {
 .social-link:hover,
 .social-link:focus {
     background-color: var(--accent-color);
-}
-
-.social-link:hover .social-icon,
-.social-link:focus .social-icon {
-    fill: var(--white-color);
+    color: var(--white-color);
 }
 
 
@@ -583,14 +581,14 @@ h1,h2,h3,h4,h5,h6,p {
     cursor: pointer;
 
     transition: color var(--transition-time) var(--transition-cubic),
-    background-color var(--transition-time) var(--transition-cubic);
+    background-color var(--transition-time) var(--transition-cubic),
+    box-shadow var(--transition-time) var(--transition-cubic);
 }
 
 .portfolio-btn:hover,
 .portfolio-btn:focus {
     background-color: var(--accent-color);
     color: var(--white-color);
-    transition: color 0.2s ease;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
         0px 1px 2px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);;
@@ -656,7 +654,7 @@ h1,h2,h3,h4,h5,h6,p {
     left: 0;
     transform: translateY(100%);
     padding: 63px 24px;
-    background-color: var(--btn-hover-color);
+    background-color: rgba(33, 150, 243, 0.9);
 
     transition: transform var(--transition-time) var(--transition-cubic);
 }
@@ -689,6 +687,7 @@ h1,h2,h3,h4,h5,h6,p {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity var(--transition-time) var(--transition-cubic);
 }
 
 .backdrop.is-hidden {
@@ -720,7 +719,22 @@ h1,h2,h3,h4,h5,h6,p {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1) ;
-    background-color: var(--white-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: var(--main-text-color);
+    background-color: transparent;
     cursor: pointer;
+
+    transition: background-color var(--transition-time) var(--transition-cubic),
+    border var(--transition-time) var(--transition-cubic),
+    color var(--transition-time) var(--transition-cubic);
+}
+
+.close-btn {
+    fill: currentColor;
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
 }
